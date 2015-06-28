@@ -1,0 +1,42 @@
+#
+# This file is part of the Cjt Terabyte LLC [yii2-extension].
+#
+# (c) Cjt Terabyte LLC [yii2-extension] <http://github.com/cjtterabytesoft>.
+# For the full copyright and license information, please view the LICENSE.md.
+# file that was distributed with this source code.
+#
+# @link http://www.cjtterabyte.com.
+# @author Wilmer Arámbula <cjtterabytellc@gmail.com>.
+# @copyright (c) 2015 Cjt Terabyte LLC.
+# @Extension: [yii2-adminlte-basic].
+# @Tests App Configuration Codeception [acceptance.suite.yml].
+# @since 1.0
+#
+
+# Codeception Test Suite Configuration
+
+# suite for acceptance tests.
+# perform tests in browser using the Selenium-like tools.
+# powered by Mink (http://mink.behat.org).
+# (tip: that's what your customer will see).
+# (tip: test your ajax and javascript by one of Mink drivers).
+
+# RUN `build` COMMAND AFTER ADDING/REMOVING MODULES.
+
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - PhpBrowser
+# you can use WebDriver instead of PhpBrowser to test javascript and ajax.
+# This will require you to install selenium. See http://codeception.com/docs/04-AcceptanceTests#Selenium
+# "restart" option is used by the WebDriver to start each time per test-file new session and cookies,
+# it is useful if you want to login in your app in each test.
+#        - WebDriver
+    config:
+        PhpBrowser:
+# PLEASE ADJUST IT TO THE ACTUAL ENTRY POINT WITHOUT PATH INFO
+            url: http://localhost:8080
+#        WebDriver:
+#            url: http://localhost.basic
+#            browser: firefox
+#            restart: true

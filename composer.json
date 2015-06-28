@@ -1,0 +1,45 @@
+{
+    "name": "cjtterabytesoft/yii2-adminlte-basic",
+    "description": "Theme: Almsaeedstudio / AdminLTE - Yii2 Basic Application Template..",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","yii2-themes", "yii2-app-basic", "AdminLTE"],
+    "license": "Apache License v. 2.0.",
+    "authors": [
+        {
+            "name": "Wilmer Arambula",
+            "email": "cjtterabytellc@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": ">=2.0.4",
+        "yiisoft/yii2-bootstrap": "*",
+        "bower-asset/admin-lte": "~2.1",
+        "bower-asset/Font-Awesome": "~4.3",
+        "bower-asset/ionicons": "~2.0",
+        "bower-asset/bootbox": "~4.4"
+    },
+    "require-dev": {
+        "yiisoft/yii2-swiftmailer": "*",
+        "yiisoft/yii2-codeception": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "cjtterabytesoft\\adminlte\\basic\\": ""
+        }
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "bootstrap": "cjtterabytesoft\\adminlte\\basic\\Bootstrap",
+        "branch-alias": {
+          "dev-master": "0.0.1-dev"
+        },
+        "asset-installer-paths": {
+        "npm-asset-library": "vendor/npm",
+        "bower-asset-library": "vendor/bower"
+      }
+    }
+}

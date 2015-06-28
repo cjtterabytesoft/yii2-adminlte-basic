@@ -1,0 +1,34 @@
+language: php
+
+php:
+  - 5.6
+  - 5.5
+  - 5.4
+
+# environment variable used in test suite
+env: TEST_ENVIRONMENT=travis
+
+# faster builds on new travis setup not using sudo
+sudo: false
+
+# cache vendor dirs
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+install:
+  - travis_retry composer self-update && composer --version
+  - travis_retry composer global require "fxp/composer-asset-plugin:~1.0.0"
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - travis_retry composer install --dev --prefer-dist --no-interaction
+# codeception
+  - travis_retry composer global require "codeception/codeception=2.0.*" "codeception/specify=*" "codeception/verify=*"
+
+before_script:
+  - cd tests
+  - ~/.composer/vendor/bin/codecept build
+  - cd codeception/_app/web
+  - php -S localhost:8080 > /dev/null 2>&1 &
+  - cd ../../../
+
+script: ~/.composer/vendor/bin/codecept run

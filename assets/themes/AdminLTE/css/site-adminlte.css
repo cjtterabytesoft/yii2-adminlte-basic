@@ -1,0 +1,1076 @@
+/*
+ * This file is part of the Cjt Terabyte LLC [yii2-extension].
+ *
+ * (c) Cjt Terabyte LLC [yii2-extension] <http://github.com/cjtterabytesoft>.
+ * For the full copyright and license information, please view the LICENSE.md.
+ * file that was distributed with this source code.
+ *
+ * @link http://www.cjtterabyte.com.
+ * @author Wilmer Arámbula <cjtterabytellc@gmail.com>.
+ * @copyright (c) 2015 Cjt Terabyte LLC.
+ * @Extension: [yii2-adminlte-basic].
+ * @CSS App [Custom].
+ * @since 1.0
+ */
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Layout Custom */
+.container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Panel Before Custom */
+.panel-before {
+    padding: 10px;
+}
+
+/* Panel-Title Custom */
+.panel-title-custom {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* Panel Default */
+.panel-default {
+    border-color: #111111;
+}
+.panel-default > .panel-heading {
+    color: white;
+    background-color: #111111;
+    border-color: #111111;
+}
+
+/* Jumbotrom Custom */
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+/* Logo Yii2 Custom */
+.col-xs-4 .a {
+    color: #000000;
+}
+.logo-yii {
+    content: url('data:image/png;base64,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');
+}
+
+/* Buttom Custom Yii2-Admin */
+.btn-custom {
+    display: block;
+}
+.group {
+    padding-top: 25px;
+}
+
+/* Recaptcha Form Login Custom */
+.recaptcha-login {
+    width: 95%;
+    margin: 0 auto;
+}
+
+/* Kv-Grid Custom Admin-LTE */
+.kv-merged-header {
+    border-bottom: 2px solid #f4f4f4 !important;
+}
+
+/* Info-User Custom */
+.info-user {
+    margin-top: 40px;
+}
+
+/* User-Panel Custom */
+.user-panel {
+    padding: 20px;
+}
+
+/* Show-User Custom*/
+.show-user {
+    margin-top: 5px;
+}
+
+/* Img-Responsive Custom */
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Text Footer-Login Custom */
+.text-footer-login {
+    color: #111111;
+    display: block;
+    text-align: center;
+}
+
+/* Custom Margin navbar-custom-menu */
+.main-header .navbar-custom-menu, .main-header .navbar-right {
+    padding-right: 15px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Logo Menu Custom Skin-Black */
+.skin-black .main-header .logo {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* Logo Menu Custom Skin-Blue */
+.skin-blue .main-header .logo {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* Logo Menu Custom Skin-Green */
+.skin-green .main-header .logo {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* Logo Menu Custom Skin-Purple */
+.skin-purple .main-header .logo {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* Logo Menu Custom Skin-Red */
+.skin-red .main-header .logo {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/* Logo Menu Custom Skin-Yellow */
+.skin-yellow .main-header .logo {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Kaushan Script', cursive;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Sidebar Header Custom Skin-black */
+.skin-black .sidebar > .sidebar-menu > li.header {
+    color: white;
+    background: #1a2226;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Sidebar Header Custom Skin-blue */
+.skin-blue .sidebar > .sidebar-menu > li.header {
+    color: white;
+    background: #1a2226;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Sidebar Header Custom Skin-green */
+.skin-green .sidebar > .sidebar-menu > li.header {
+    color: white;
+    background: #1a2226;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Sidebar Header Custom Skin-purple */
+.skin-purple .sidebar > .sidebar-menu > li.header {
+    color: white;
+    background: #1a2226;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Sidebar Header Custom Skin-Red */
+.skin-red .sidebar > .sidebar-menu > li.header {
+    color: white;
+    background: #1a2226;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Sidebar Header Custom Skin-Yellow */
+.skin-yellow .sidebar > .sidebar-menu > li.header {
+    color: white;
+    background: #1a2226;
+    text-align: center;
+    font-size: 16px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Breadcrumb Custom Skin-Black */
+.skin-black .breadcrumb {
+    padding: 4px 15px;
+    list-style: none;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+.skin-black .breadcrumb li a {
+    color: lightgray;
+}
+.skin-black .breadcrumb > .active  {
+    color: #111111;
+}
+
+/* Breadcrumb Custom Skin-Blue */
+.skin-blue .breadcrumb {
+    padding: 4px 15px;
+    list-style: none;
+    background-color: #3c8dbc;
+    border-radius: 4px;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+.skin-blue .breadcrumb li a {
+    color: lightgray;
+}
+.skin-blue .breadcrumb > .active  {
+    color: white;
+}
+.skin-blue .breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #FFF;
+    content: "/\00a0";
+}
+
+/* Breadcrumb Custom Skin-Green */
+.skin-green .breadcrumb {
+    padding: 4px 15px;
+    list-style: none;
+    background-color: #00a65a;
+    border-radius: 4px;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+.skin-green .breadcrumb li a {
+    color: lightgray;
+}
+.skin-green .breadcrumb > .active  {
+    color: white;
+}
+.skin-green .breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #FFF;
+    content: "/\00a0";
+}
+
+/* Breadcrumb Custom Skin-Purple */
+.skin-purple .breadcrumb {
+    padding: 4px 15px;
+    list-style: none;
+    background-color: #605ca8;
+    border-radius: 4px;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+.skin-purple .breadcrumb li a {
+    color: lightgray;
+}
+.skin-purple .breadcrumb > .active  {
+    color: white;
+}
+.skin-purple .breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #FFF;
+    content: "/\00a0";
+}
+
+/* Breadcrumb Custom Skin-Red */
+.skin-red .breadcrumb {
+    padding: 4px 15px;
+    list-style: none;
+    background-color: #dd4b39;
+    border-radius: 4px;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+.skin-red .breadcrumb li a {
+    color: lightgray;
+}
+.skin-red .breadcrumb > .active  {
+    color: white;
+}
+.skin-red .breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #FFF;
+    content: "/\00a0";
+}
+
+/* Breadcrumb Custom Skin-Yellow */
+.skin-yellow .breadcrumb {
+    padding: 4px 15px;
+    list-style: none;
+    background-color: #f39c12;
+    border-radius: 4px;
+    margin-top: 7px;
+    margin-bottom: 0;
+}
+.skin-yellow .breadcrumb li a {
+    color: #111111;
+}
+.skin-yellow .breadcrumb > .active  {
+    color: white;
+}
+.skin-yellow .breadcrumb > li + li:before {
+    padding: 0 5px;
+    color: #FFF;
+    content: "/\00a0";
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Page Form Login Custom Skin Black */
+.skin-black .form-box {
+    width: 360px;
+    margin: 90px auto 0 auto;
+}
+.skin-black .form-box .header {
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    background-color: #ffffff;
+    border: 1px solid #111111;
+    padding: 1px 10px 10px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+    color: #111111;
+}
+.skin-black .form-box .body {
+    border: 1px solid #111111;
+    padding: 10px 20px;
+    background: #fff;
+    color: #444;
+}
+
+.skin-black .form-box .footer {
+    padding: 10px 20px;
+    background: #fff;
+    color: #444;
+}
+
+.skin-black .form-box .body > .form-group,
+.skin-black .form-box .footer > .form-group {
+    margin-top: 20px;
+}
+.skin-black .form-box .body > .form-group > input,
+.skin-black .form-box .footer > .form-group > input {
+    border: #fff;
+}
+.skin-black .form-box .body > .btn,
+.skin-black .form-box .footer > .btn {
+    margin-bottom: 10px;
+}
+.skin-black.form-box .footer {
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Page Form Login Custom Skin Blue */
+.skin-blue .form-box {
+    width: 360px;
+    margin: 90px auto 0 auto;
+}
+.skin-blue .form-box .header {
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    background-color: #3c8dbc;
+    border: 1px solid #3c8dbc;
+    padding: 1px 10px 10px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+    color: #fff;
+}
+.skin-blue .form-box .body{
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #3c8dbc;
+    color: #444;
+}
+
+.skin-blue .form-box .footer {
+    padding: 10px 20px;
+    background: #fff;
+    color: #444;
+}
+
+.skin-blue .form-box .body > .form-group,
+.skin-blue .form-box .footer > .form-group {
+    margin-top: 20px;
+}
+.skin-blue .form-box .body > .form-group > input,
+.skin-blue .form-box .footer > .form-group > input {
+    border: #fff;
+}
+.skin-blue .form-box .body > .btn,
+.skin-blue .form-box .footer > .btn {
+    margin-bottom: 10px;
+}
+.skin-blue .form-box .footer {
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Page Form Login Custom Skin Green */
+.skin-green .form-box {
+    width: 360px;
+    margin: 90px auto 0 auto;
+}
+.skin-green .form-box .header {
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    background-color: #00a65a;
+    border: 1px solid #00a65a;
+    padding: 1px 10px 10px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+    color: #fff;
+}
+.skin-green .form-box .body{
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #00a65a;
+    color: #444;
+}
+
+.skin-green .form-box .footer {
+    padding: 10px 20px;
+    background: #fff;
+    color: #444;
+}
+
+.skin-green .form-box .body > .form-group,
+.skin-green .form-box .footer > .form-group {
+    margin-top: 20px;
+}
+.skin-green .form-box .body > .form-group > input,
+.skin-green .form-box .footer > .form-group > input {
+    border: #fff;
+}
+.skin-green .form-box .body > .btn,
+.skin-green .form-box .footer > .btn {
+    margin-bottom: 10px;
+}
+.skin-green .form-box .footer {
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Page Form Login Custom Skin Purple */
+.skin-purple .form-box {
+    width: 360px;
+    margin: 90px auto 0 auto;
+}
+.skin-purple .form-box .header {
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    background-color: #605ca8;
+    border: 1px solid #605ca8;
+    padding: 1px 10px 10px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+    color: #fff;
+}
+.skin-purple .form-box .body{
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #605ca8;
+    color: #444;
+}
+
+.skin-purple .form-box .footer {
+    padding: 10px 20px;
+    background: #fff;
+    color: #444;
+}
+
+.skin-purple .form-box .body > .form-group,
+.skin-purple .form-box .footer > .form-group {
+    margin-top: 20px;
+}
+.skin-purple .form-box .body > .form-group > input,
+.skin-purple .form-box .footer > .form-group > input {
+    border: #fff;
+}
+.skin-purple .form-box .body > .btn,
+.skin-purple .form-box .footer > .btn {
+    margin-bottom: 10px;
+}
+.skin-purple .form-box .footer {
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Page Form Login Custom Skin Red */
+.skin-red .form-box {
+    width: 360px;
+    margin: 90px auto 0 auto;
+}
+.skin-red .form-box .header {
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    background-color: #dd4b39;
+    border: 1px solid #dd4b39;
+    padding: 1px 10px 10px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+    color: #fff;
+}
+.skin-red .form-box .body{
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #dd4b39;
+    color: #444;
+}
+
+.skin-red .form-box .footer {
+    padding: 10px 20px;
+    background: #fff;
+    color: #444;
+}
+
+.skin-red .form-box .body > .form-group,
+.skin-red .form-box .footer > .form-group {
+    margin-top: 20px;
+}
+.skin-red .form-box .body > .form-group > input,
+.skin-red .form-box .footer > .form-group > input {
+    border: #fff;
+}
+.skin-red .form-box .body > .btn,
+.skin-red .form-box .footer > .btn {
+    margin-bottom: 10px;
+}
+.skin-red .form-box .footer {
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Page Form Login Custom Skin Yellow */
+.skin-yellow .form-box {
+    width: 360px;
+    margin: 90px auto 0 auto;
+}
+.skin-yellow .form-box .header {
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    -webkit-border-bottom-right-radius: 0;
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-topleft: 4px;
+    -moz-border-radius-topright: 4px;
+    -moz-border-radius-bottomright: 0;
+    -moz-border-radius-bottomleft: 0;
+    background-color: #f39c12;
+    border: 1px solid #f39c12;
+    padding: 1px 10px 10px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 300;
+    color: #fff;
+}
+.skin-yellow .form-box .body{
+    padding: 10px 20px;
+    background: #fff;
+    border: 1px solid #f39c12;
+    color: #444;
+}
+
+.skin-yellow .form-box .footer {
+    padding: 10px 20px;
+    background: #fff;
+    color: #444;
+}
+.skin-yellow .form-box .body > .form-group,
+.skin-yellow .form-box .footer > .form-group {
+    margin-top: 20px;
+}
+.skin-yellow .form-box .body > .form-group > input,
+.skin-yellow .form-box .footer > .form-group > input {
+    border: #fff;
+}
+.skin-yellow .form-box .body > .btn,
+.skin-yellow .form-box .footer > .btn {
+    margin-bottom: 10px;
+}
+.skin-yellow .form-box .footer {
+    -webkit-border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -moz-border-radius-topleft: 0;
+    -moz-border-radius-topright: 0;
+    -moz-border-radius-bottomright: 4px;
+    -moz-border-radius-bottomleft: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 4px;
+border-bottom-left-radius: 4px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Footer Custom Skin Black */
+.skin-black .main-footer{
+    padding: 0;
+    background-color: #ffffff;
+}
+.skin-black .main-footer .footer-adminlte {
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    border-top: 1px solid #ddd;
+    color: #111111;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+}
+.skin-black .main-footer .footer-adminlte .box-body {
+    padding: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Footer Custom Skin Blue */
+.skin-blue .main-footer{
+    padding: 0;
+    background-color: #3c8dbc;
+}
+.skin-blue .main-footer .footer-adminlte {
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    border-top: 1px solid #ddd;
+    color: #f9f9f9;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+}
+.skin-blue .main-footer .footer-adminlte .box-body {
+    padding: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Footer Custom Skin Green */
+.skin-green .main-footer{
+    padding: 0;
+    background-color: #00a65a;
+}
+.skin-green .main-footer .footer-adminlte {
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    border-top: 1px solid #ddd;
+    color: #f9f9f9;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+}
+.skin-green .main-footer .footer-adminlte .box-body {
+    padding: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Footer Custom Skin Purple */
+.skin-purple .main-footer{
+    padding: 0;
+    background-color: #605ca8;
+}
+.skin-purple .main-footer .footer-adminlte {
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    border-top: 1px solid #ddd;
+    color: #f9f9f9;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+}
+.skin-purple .main-footer .footer-adminlte .box-body {
+    padding: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Footer Custom Skin Red */
+.skin-red .main-footer{
+    padding: 0;
+    background-color: #dd4b39;
+}
+.skin-red .main-footer .footer-adminlte {
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    border-top: 1px solid #ddd;
+    color: #f9f9f9;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+}
+.skin-red .main-footer .footer-adminlte .box-body {
+    padding: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Footer Custom Skin Yellow */
+.skin-yellow .main-footer{
+    padding: 0;
+    background-color: #f39c12;
+}
+.skin-yellow .main-footer .footer-adminlte {
+    line-height: 30px;
+    text-align: center;
+    display: block;
+    border-top: 1px solid #ddd;
+    color: #f9f9f9;
+    font-size: 12px;
+    font-weight: bolder;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+}
+.skin-yellow .main-footer .footer-adminlte .box-body {
+    padding: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Footer Icons Custom Skin-Black */
+.skin-black .iconos {
+    color: #111111;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+/* Footer Icons Custom Skin-Blue */
+.skin-blue .iconos {
+    color: #ffffff;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+/* Footer Icons Custom Skin-Green */
+.skin-green .iconos {
+    color: #ffffff;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+/* Footer Icons Custom Skin-Purple */
+.skin-purple .iconos {
+    color: #ffffff;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+/* Footer Icons Custom Skin-Red */
+.skin-red .iconos {
+    color: #ffffff;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+/* Footer Icons Custom Skin-Yellow */
+.skin-yellow .iconos {
+    color: #ffffff;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Treeview Custom Sidebar Skin-Black */
+.skin-black .treeview-menu > li > a {
+    color: #8aa4af;
+    padding-left: 30px;
+}
+.skin-black .treeview-menu > li.active > a,
+.skin-black .treeview-menu > li > a:hover {
+    color: darkgray;
+    padding-left: 30px;
+}
+
+/* Treeview Custom Sidebar Skin-Blue */
+.skin-blue .treeview-menu > li > a {
+    color: #8aa4af;
+    padding-left: 30px;
+}
+.skin-blue .treeview-menu > li.active > a,
+.skin-blue .treeview-menu > li > a:hover {
+    color: #00c0ef;
+    padding-left: 30px;
+}
+
+/* Treeview Custom Sidebar Skin-Green */
+.skin-green .treeview-menu > li > a {
+    color: #8aa4af;
+    padding-left: 30px;
+}
+.skin-green .treeview-menu > li.active > a,
+.skin-green .treeview-menu > li > a:hover {
+    color: #00a65a;
+    padding-left: 30px;
+}
+
+/* Treeview Custom Sidebar Skin-Purple */
+.skin-purple .treeview-menu > li > a {
+    color: #8aa4af;
+    padding-left: 30px;
+}
+.skin-purple .treeview-menu > li.active > a,
+.skin-purple .treeview-menu > li > a:hover {
+    color: #7d7da8;
+    padding-left: 30px;
+}
+
+/* Treeview Custom Sidebar Skin-Red */
+.skin-red .treeview-menu > li > a {
+    color: #8aa4af;
+    padding-left: 30px;
+}
+.skin-red .treeview-menu > li.active > a,
+.skin-red .treeview-menu > li > a:hover {
+    color: #dd4b39;
+    padding-left: 30px;
+}
+
+/* Treeview Custom Sidebar Skin-Yellow */
+.skin-yellow .treeview-menu > li > a {
+    color: #8aa4af;
+    padding-left: 30px;
+}
+.skin-yellow .treeview-menu > li.active > a,
+.skin-yellow .treeview-menu > li > a:hover {
+    color: #f39c12;
+    padding-left: 30px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+
+/* Box Box-Solid Skin-Black */
+.skin-black .box.box-solid {
+    border: 1px solid #111111;
+}
+
+.skin-black .box.box-solid > .box-header {
+    color: #ffffff;
+    background-color: #111111;
+}
+
+.skin-black .box.box-solid > .box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+/* Box Box-Solid Skin-Blue */
+.skin-blue .box.box-solid {
+    border: 1px solid #3c8dbc;
+}
+
+.skin-blue .box.box-solid > .box-header {
+    color: #ffffff;
+    background-color: #3c8dbc;
+}
+
+.skin-blue .box.box-solid > .box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+/* Box Box-Solid Skin-Green */
+.skin-green .box.box-solid {
+    border: 1px solid #00a65a;
+}
+
+.skin-green .box.box-solid > .box-header {
+    color: #ffffff;
+    background-color: #00a65a;
+}
+
+.skin-green .box.box-solid > .box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+/* Box Box-Solid Skin-Purple */
+.skin-purple .box.box-solid {
+    border: 1px solid #605ca8;
+}
+
+.skin-purple .box.box-solid > .box-header {
+    color: #ffffff;
+    background-color: #605ca8;
+}
+
+.skin-purple .box.box-solid > .box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+/* Box Box-Solid Skin-Red */
+.skin-red .box.box-solid {
+    border: 1px solid #dd4b39;
+}
+
+.skin-red .box.box-solid > .box-header {
+    color: #ffffff;
+    background-color: #dd4b39;
+}
+
+.skin-red .box.box-solid > .box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+/* Box Box-Solid Skin-Yellow */
+.skin-yellow .box.box-solid {
+    border: 1px solid #f39c12;
+}
+
+.skin-yellow .box.box-solid > .box-header {
+    color: #ffffff;
+    background-color: #f39c12;
+}
+
+.skin-yellow .box.box-solid > .box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
