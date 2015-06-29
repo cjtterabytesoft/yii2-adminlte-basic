@@ -21,8 +21,8 @@ use yii\helpers\Html;
 
 <?= Html::beginTag('div', ['class' => 'user-panel']) ?>
     <?= Html::beginTag('div', ['class' => 'pull-left image']) ?>
-        <?= html::img(\yii::getAlias('@imagesurl_30'),
-            $options = ['class' => 'img-rounded'], ['aria-expanded' => 'false'])
+        <?= html::img(\yii::$app->params['imagesurl_30'],
+            $options = ['class' => 'img-rounded', 'aria-expanded' => 'false'])
         ?>
     <?= Html::endTag('div') ?>
     <?= Html::beginTag('div', ['class' => 'pull-left info']) ?>

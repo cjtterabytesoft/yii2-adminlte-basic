@@ -21,7 +21,7 @@ use yii\bootstrap\Nav;
 $menuUser[] = ['label' => html::tag('i', '', ['class' => 'glyphicon glyphicon-user']) . \yii::$app->user->identity->username, 'options'=> ['class'=>'dropdown user user-menu'],
     'items' => [
         Html::tag('li',
-            Html::img(\yii::getAlias('@imagesurl_60'), $options = ['class' => 'img-rounded'], ['aria-expanded' => 'false']) .
+            Html::img(\yii::$app->params['imagesurl_60'], $options = ['class' => 'img-rounded', 'aria-expanded' => 'false']) .
             Html::tag('p',
                 \yii::$app->user->identity->username .
                 html::tag('small', '&nbsp' . Yii::t('adminlte', 'Member Since:') . '&nbsp' . Yii::t('adminlte', '{0, date, MMMM dd, YYYY HH:mm}', \yii::$app->user->identity->created_at))

@@ -46,6 +46,10 @@ class Bootstrap implements BootstrapInterface
                 ],
             ]);
         }
+        /* Copy Avatar Images */
+        if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@app/web/images'), $options = [])) {
+            \yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/adminlte/basic/images/'), \Yii::getAlias('@app/web/images'));
+        }
         /* Config Params */
         if (!isset($app->params['adminEmail'])) {
             $app->params['adminEmail'] = 'admin@example.com';
@@ -71,17 +75,20 @@ class Bootstrap implements BootstrapInterface
         if (!isset($app->params['WebName'])) {
             $app->params['WebName'] = 'My Application';
         }
-        /* Copy Avatar Images */
-        if (\yii\helpers\BaseFileHelper::filterPath(\Yii::getAlias('@app/web/images'), $options = [])) {
-            \yii\helpers\BaseFileHelper::copyDirectory(\Yii::getAlias('@cjtterabytesoft/adminlte/basic/images/'), \Yii::getAlias('@app/web/images'));
-        }
-        /* Config Images Url */
         if (!YII_ENV_TEST) {
-            Yii::setAlias('imagesurl_30', '//www.basic.tk/images/avatar/profile/30/icon-avatar.png');
-            Yii::setAlias('imagesurl_60', '//www.basic.tk/images/avatar/profile/60/icon-avatar.png');
-        } else {
-            Yii::setAlias('imagesurl_30', '//localhost.basic/images/avatar/profile/30/icon-avatar.png');
-            Yii::setAlias('imagesurl_60', '//localhost.basic/images/avatar/profile/60/icon-avatar.png');
+            if (!isset($app->params['imagesurl_30'])) {
+                $app->params['imagesurl_30'] = 'http://www.basic.tk/images/avatar/profile/30/icon-avatar.png';
+            }
+            if (!isset($app->params['imagesurl_60'])) {
+                $app->params['imagesurl_60'] = 'http://www.basic.tk/images/avatar/profile/60/icon-avatar.png';
+            }
+            } else {
+                if (!isset($app->params['imagesurl_30'])) {
+                    $app->params['imagesurl_30'] = 'http://localhost.basic/images/avatar/profile/30/icon-avatar.png';
+                }
+                if (!isset($app->params['imagesurl_60'])) {
+                    $app->params['imagesurl_60'] = 'http://localhost.basic/images/avatar/profile/60/icon-avatar.png';
+                }
         }
     }
 }
