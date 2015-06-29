@@ -82,13 +82,8 @@ Config (params.php):
         'imagesurl_60'     => 'http://www.basic.tk/images/avatar/profile/60/icon-avatar.png',
     ]
 
-<br/>
-<br/>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="LRLATZP493W46">
-<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
 
-Your Donation is Important to Further Develop Open Source Software: 
+
+Thankful to cjtterabytesoft [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LRLATZP493W46).
+Your Donation is Important to Further Develop Open Source Software.
+
