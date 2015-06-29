@@ -44,13 +44,13 @@ class AdminLTEAsset extends AssetBundle
     public function init()
     {
         parent::init();
-        $this->publishOptions['beforeCopy'] = function ($from, $to) {
+        $this->publishOptions['beforeCopy'] = function ($from) {
             $publish = false;
             $dirname = basename($from);
             $parentFolder = basename(dirname($from));
             if (
-                ($dirname === 'css' || $dirname === 'skins'  || $dirname === 'js') or
-                ($parentFolder === 'css' || $parentFolder === 'skins'  || $parentFolder === 'js')
+                ($dirname === 'css' or $dirname === 'skins'  or $dirname === 'js') or
+                ($parentFolder === 'css' or $parentFolder === 'skins'  or $parentFolder === 'js')
             ) {
                 $publish = true;
             }

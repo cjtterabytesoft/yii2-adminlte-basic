@@ -35,4 +35,4 @@ $this->params['breadcrumbs'][] = Yii::t('adminlte',$this->title);
         <?= html::tag('code',  __FILE__) ?>
         <?= html::tag('p', '') ?>
     <?= Html::endTag('div') ?>
-<?= Html::endTag('div') ?>
+<?= Html::endTag('div');

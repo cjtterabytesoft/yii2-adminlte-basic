@@ -112,4 +112,4 @@ AppAssetAdminLTE::register($this);
             <?= Html::endTag('body') ?>
         <?php $this->endBody() ?>
     <?= Html::endTag('html') ?>
-<?php $this->endPage() ?>
+<?php $this->endPage();

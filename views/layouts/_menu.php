@@ -21,7 +21,7 @@ use yii\bootstrap\Nav;
 $user = \yii::$app->user->identity;
 
 $menuItems = [
-    ['label' => html::tag('span', Html::tag('i', '', ['class' => 'fa fa-home fa-lg']) . ' ' . Yii::t('adminlte', 'Home')), 'url' => yii::$app->getHomeUrl()],
+    ['label' => html::tag('span', Html::tag('i', '', ['class' => 'fa fa-home fa-lg']) . ' ' . Yii::t('adminlte', 'Home')), 'url' => Yii::$app->homeUrl],
     ['label' => html::tag('span', Html::tag('i', '', ['class' => 'fa fa-spinner fa-lg fa-spin']) . ' ' . Yii::t('adminlte', 'About Us')), 'url' => ['/site/about']],
     ['label' => html::tag('span', Html::tag('i', '', ['class' => 'fa fa-envelope fa-lg']) . ' ' . Yii::t('adminlte', 'Contact')), 'url' => ['/site/contact']],
 ];
@@ -30,7 +30,7 @@ if (Yii::$app->user->isGuest) {
     $menuItems[] = ['label' => html::tag('span', Html::tag('i', '', ['class' => 'fa fa-sign-in fa-lg']) . ' ' . Yii::t('adminlte', 'Login')), 'url' => ['/site/login']];
     } else {
         $baseimg = Yii::$app->session->get('user.avatar30');
-        $menuItems[] = ['label' => $user->username . ' ' .  html::img($baseimg, $options = ['class'=>'img-rounded'], ['aria-expanded'=>'false']),
+        $menuItems[] = ['label' => $user->username . ' ' .  html::img($baseimg, $options = ['class'=>'img-rounded', 'aria-expanded'=>'false']),
             'items' => [
                 ['label' => html::tag('span', Html::tag('i', '', ['class' => 'fa fa-user fa-lg']) . ' ' . Yii::t('adminlte', 'User Profile')), 'url' => ['/user/settings/profile']],
                 ['label' => html::tag('span', Html::tag('i', '', ['class' => 'fa fa-sign-out fa-lg']) . ' ' . Yii::t('adminlte', 'Logout')), 'url' => ['/site/logout'],'linkOptions' => ['data-method' => 'post']],

@@ -30,13 +30,13 @@ class FontAwesomeAsset extends AssetBundle
     public function init()
     {
         parent::init();
-        $this->publishOptions['beforeCopy'] = function ($from, $to) {
+        $this->publishOptions['beforeCopy'] = function ($from) {
             $publish = false;
             $dirname = basename($from);
             $parentFolder = basename(dirname($from));
             if (
-                ($dirname === 'css' || $dirname === 'fonts') or
-                ($parentFolder === 'css' || $parentFolder === 'fonts')
+                ($dirname === 'css' or $dirname === 'fonts') or
+                ($parentFolder === 'css' or $parentFolder === 'fonts')
             ) {
                 $publish = true;
             }

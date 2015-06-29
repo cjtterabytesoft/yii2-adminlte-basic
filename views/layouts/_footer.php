@@ -49,4 +49,4 @@ use cjtterabytesoft\adminlte\basic\helpers\AdminLteHelper;
             <?= Html::endTag('div') ?>
         <?= Html::endTag('div') ?>
     <?= Html::endTag('div') ?>
-<?= Html::endTag('footer') ?>
+<?= Html::endTag('footer');

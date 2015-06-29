@@ -31,4 +31,4 @@ use yii\helpers\Html;
             <?= Html::tag('i', Yii::t('adminlte', 'On Line')) ?>
         <?= Html::endTag('P') ?>
     <?= Html::endTag('div') ?>
-<?= Html::endTag('div') ?>
+<?= Html::endTag('div');
