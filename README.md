@@ -22,17 +22,17 @@ It includes all commonly used configurations that would allow you to focus on ad
 ScreenShot:
 ===========
 
-![Home Page Skin-Black](https://drive.google.com/open?id=0B3UmtLcg7VeBTS1NbGk2QnBQWms&authuser=0)
+![Home Page Skin-Black](https://drive.google.com/file/d/0B3UmtLcg7VeBTS1NbGk2QnBQWms/view)
 
-![Home Page Skin-Blue](https://drive.google.com/open?id=0B3UmtLcg7VeBVXhHOWNGc2wxUm8&authuser=0)
+![Home Page Skin-Blue](https://drive.google.com/file/d/0B3UmtLcg7VeBVXhHOWNGc2wxUm8/view)
 
-![Home Page Skin-Green](https://drive.google.com/open?id=0B3UmtLcg7VeBdE4zc2lWaUVsSW8&authuser=0)
+![Home Page Skin-Green](https://drive.google.com/file/d/0B3UmtLcg7VeBdE4zc2lWaUVsSW8/view)
 
-![Home Page Skin-purple](https://drive.google.com/open?id=0B3UmtLcg7VeBMm4zX05EU1FJZkE&authuser=0)
+![Home Page Skin-purple](https://drive.google.com/file/d/0B3UmtLcg7VeBMm4zX05EU1FJZkE/view)
 
-![Home Page Skin-red](https://drive.google.com/open?id=0B3UmtLcg7VeBejZzWGRWTWNTVzQ&authuser=0)
+![Home Page Skin-red](https://drive.google.com/file/d/0B3UmtLcg7VeBejZzWGRWTWNTVzQ/view)
 
-![Home Page Skin-yellow](https://drive.google.com/open?id=0B3UmtLcg7VeBdnNGVmtNNk05ZWc&authuser=0)
+![Home Page Skin-yellow](https://drive.google.com/file/d/0B3UmtLcg7VeBdnNGVmtNNk05ZWc/view)
 
 
 Installation
