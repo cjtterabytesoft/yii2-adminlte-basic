@@ -39,8 +39,8 @@ class AppAssetAdminLTE extends AssetBundle
             $dirname = basename($from);
             $parentFolder = basename(dirname($from));
             if (
-                ($dirname === 'css' or $dirname === 'js') or
-                ($parentFolder === 'css' or $parentFolder === 'js')
+                ($dirname === 'css' || $dirname === 'js') ||
+                ($parentFolder === 'css' || $parentFolder === 'js')
             ) {
                 $publish = true;
             }

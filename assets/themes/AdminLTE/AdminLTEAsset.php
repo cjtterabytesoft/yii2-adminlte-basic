@@ -49,8 +49,8 @@ class AdminLTEAsset extends AssetBundle
             $dirname = basename($from);
             $parentFolder = basename(dirname($from));
             if (
-                ($dirname === 'css' or $dirname === 'skins'  or $dirname === 'js') or
-                ($parentFolder === 'css' or $parentFolder === 'skins'  or $parentFolder === 'js')
+                ($dirname === 'css' || $dirname === 'skins'  || $dirname === 'js') ||
+                ($parentFolder === 'css' || $parentFolder === 'skins'  || $parentFolder === 'js')
             ) {
                 $publish = true;
             }

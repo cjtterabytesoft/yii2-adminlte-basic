@@ -35,8 +35,8 @@ class FontAwesomeAsset extends AssetBundle
             $dirname = basename($from);
             $parentFolder = basename(dirname($from));
             if (
-                ($dirname === 'css' or $dirname === 'fonts') or
-                ($parentFolder === 'css' or $parentFolder === 'fonts')
+                ($dirname === 'css' || $dirname === 'fonts') ||
+                ($parentFolder === 'css' || $parentFolder === 'fonts')
             ) {
                 $publish = true;
             }
