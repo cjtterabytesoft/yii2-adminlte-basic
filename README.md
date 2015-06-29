@@ -22,18 +22,13 @@ It includes all commonly used configurations that would allow you to focus on ad
 ScreenShot:
 ===========
 
-![Home Page Skin-Black](https://lh3.googleusercontent.com/4vg4Ikb6gmXUf957Cha06cGpk8MR8Uo9V9RNjrXCShLUdCuwxSmjyPGciiwLOPBe2AYNVWsdUTzgqf8=w1656-h829-rw)
-
-![Home Page Skin-Blue](https://lh4.googleusercontent.com/E-JgiPtK9KdvErZl02scQaJGxfVLd9VaT87PzwgIxXHBUn8q6m4FTl-2rdIFarkQ_WeCfpROxTkRO6c=w1656-h829-rw)
+Skin-Green:
 
 ![Home Page Skin-Green](https://lh5.googleusercontent.com/-8yGcIaJK7XbUhO66OPbDLTM_c0JoG5wxB1crin5sKR-OVPdKif19-XnUzG_1U3UFhCZZ_YXAa0znsk=w1656-h829-rw)
 
+Skin-Purple:
+
 ![Home Page Skin-purple](https://lh6.googleusercontent.com/go3xfwEb2IxU3PvBgFhr_StRnMSHUQyCoEi_jj-agn1BjXtkcwfnvRmjJ-cFy7qZhu5-WI8CajKBhik=w1656-h603-rw)
-
-![Home Page Skin-red](https://lh5.googleusercontent.com/6UhXXSh7Dfs0a3qCj_J8pB3xfar-NOkOZv_EXTgKfFruYaiwKs_kXPNdWU9TZQgpgpnUheEG0lvpm3U=w1656-h603-rw)
-
-![Home Page Skin-yellow](https://lh4.googleusercontent.com/79GBlzHPBiX-AqHaFRAr_oMkPNlS3GzWMxwGmqpSzU8KbkaRaqM_BzgPcrZyPS7WOb4ZtvkNKg30RnU=w1656-h603-rw)
-
 
 Installation
 ------------
