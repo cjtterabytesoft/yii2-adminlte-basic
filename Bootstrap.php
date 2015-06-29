@@ -26,10 +26,6 @@ class Bootstrap implements BootstrapInterface
     /** @inheritdoc */
     public function bootstrap($app)
     {
-        /* Config Language */
-        if (!isset($app->language)) {
-            $app->language = 'es';
-        }
         /* Config Translation */
         if (!isset($app->get('i18n')->translations['adminlte*'])) {
             $app->get('i18n')->translations['adminlte*'] = [

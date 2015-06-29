@@ -3,6 +3,7 @@
 [![Latest Unstable Version](https://poser.pugx.org/cjtterabytesoft/yii2-adminlte-basic/v/unstable)](https://packagist.org/packages/cjtterabytesoft/yii2-adminlte-basic)
 [![Build Status](https://travis-ci.org/cjtterabytesoft/yii2-adminlte-basic.svg?branch=master)](https://travis-ci.org/cjtterabytesoft/yii2-adminlte-basic)
 [![Dependency Status](https://www.versioneye.com/user/projects/558a99cc306662001e00084b/badge.svg?style=flat)](https://www.versioneye.com/user/projects/558a99cc306662001e00084b)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/cjtterabytesoft/yii2-adminlte-basic/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/cjtterabytesoft/yii2-adminlte-basic/?branch=master)
 [![Code Climate](https://codeclimate.com/github/cjtterabytesoft/yii2-adminlte-basic/badges/gpa.svg)](https://codeclimate.com/github/cjtterabytesoft/yii2-adminlte-basic)
 [![License](https://poser.pugx.org/cjtterabytesoft/yii2-adminlte-basic/license)](https://packagist.org/packages/cjtterabytesoft/yii2-adminlte-basic)
 [![Daily Downloads](https://poser.pugx.org/cjtterabytesoft/yii2-adminlte-basic/d/daily)](https://packagist.org/packages/cjtterabytesoft/yii2-adminlte-basic)
@@ -25,6 +26,8 @@ The preferred way to install this extension is through [composer](http://getcomp
 
 Either run
 
+Installed: [yii2-app-basic](https://github.com/yiisoft/yii2-app-basic/).
+
 ```
 php composer.phar require --prefer-dist cjtterabytesoft/yii2-adminlte-basic "*"
 ```
@@ -37,3 +40,55 @@ or add
 
 to the require section of your `composer.json` file.
 
+Config (web.php):
+
+    /* defined language */
+    'language' => 'es', // Your Language Custom //
+    'components' => [
+        // Configuration User [Theme AdminLTE - Basic] //
+        'user' => [
+            'identityClass' => 'cjtterabytesoft\adminlte\basic\models\User',
+            'enableAutoLogin' => true,
+        ],    
+        // Configuration Theme [AdminLTE - Basic] //
+        'view' => [
+            'theme' => [
+                'pathMap' => [
+                    '@app/views/layouts' => '@cjtterabytesoft/adminlte/basic/views/layouts',
+                    '@app/views/site'    => '@cjtterabytesoft/adminlte/basic/views/site',
+                ],
+            ],
+        ],
+        // Configuration ControllerMap [AdminLTE - Basic] //
+        'controllerMap' => [
+            'site' => [
+                'class' => 'cjtterabytesoft\adminlte\basic\controllers\SiteController',
+            ],
+        ],        
+    ]        
+    
+Config (params.php):
+
+    return [
+        'adminEmail'       => 'admin@example.com',
+        'AdminLTESkin'     => 'skin-yellow', // Skin Theme AdminLte Options: [skin-black - skin-blue - skin-green - skin-purple - skin-red] //
+        'Author'           => '2015 - Wilmer Arambula', // Your Brand //
+        'Facebook_Account' => 'https://www.facebook.com/username',    // Your Facebook Account //
+        'Google_Account'   => 'https://www.google.com/+username',     // Your Google+ Account //
+        'Linkedin_Account' => 'https://www.linkedin.com/in/username', // Your Linkedin Account //
+        'Twitter_Account'  => 'https://twitter.com/username',         // Your Twitter Account //
+        'WebName'          => 'My Application', // Your Application Name //
+        'imagesurl_30'     => 'http://www.basic.tk/images/avatar/profile/30/icon-avatar.png', // Your Url Avatar Images //
+        'imagesurl_60'     => 'http://www.basic.tk/images/avatar/profile/60/icon-avatar.png',
+    ]
+
+<br/>
+<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="LRLATZP493W46">
+<input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+Your Donation is Important to Further Develop Open Source Software: 
