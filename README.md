@@ -19,6 +19,22 @@ Yii2 application best for rapidly creating small projects.</p>
 <p style="text-align: justify">The template contains the basic features including user login/logout and a contact page. 
 It includes all commonly used configurations that would allow you to focus on adding new features to your application.</p>
 
+ScreenShot:
+===========
+
+![Home Page Skin-Black](https://drive.google.com/open?id=0B3UmtLcg7VeBTS1NbGk2QnBQWms&authuser=0)
+
+![Home Page Skin-Blue](https://drive.google.com/open?id=0B3UmtLcg7VeBVXhHOWNGc2wxUm8&authuser=0)
+
+![Home Page Skin-Green](https://drive.google.com/open?id=0B3UmtLcg7VeBdE4zc2lWaUVsSW8&authuser=0)
+
+![Home Page Skin-purple](https://drive.google.com/open?id=0B3UmtLcg7VeBMm4zX05EU1FJZkE&authuser=0)
+
+![Home Page Skin-red](https://drive.google.com/open?id=0B3UmtLcg7VeBejZzWGRWTWNTVzQ&authuser=0)
+
+![Home Page Skin-yellow](https://drive.google.com/open?id=0B3UmtLcg7VeBdnNGVmtNNk05ZWc&authuser=0)
+
+
 Installation
 ------------
 
@@ -84,6 +100,6 @@ Config (params.php):
 
 
 
-Thankful to cjtterabytesoft [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LRLATZP493W46).
+Thankful to cjtterabytesoft [Donate Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LRLATZP493W46).
 Your Donation is Important to Further Develop Open Source Software.
 
