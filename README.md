@@ -24,11 +24,11 @@ ScreenShot:
 
 Skin-Green:
 
-![Home Page Skin-Green](https://lh5.googleusercontent.com/-8yGcIaJK7XbUhO66OPbDLTM_c0JoG5wxB1crin5sKR-OVPdKif19-XnUzG_1U3UFhCZZ_YXAa0znsk=w1656-h829-rw)
+![Home Page Skin-Green](https://lh4.googleusercontent.com/S6dbC1FhJporI3Wr6bGWDBOFsXN3QoZ5pIUBRvGAurgYmGiHhy3TU2hiNOzxfmPMHlrJhf-gjZaM-Is=w1656-h829-rw)
 
 Skin-Purple:
 
-![Home Page Skin-purple](https://lh6.googleusercontent.com/go3xfwEb2IxU3PvBgFhr_StRnMSHUQyCoEi_jj-agn1BjXtkcwfnvRmjJ-cFy7qZhu5-WI8CajKBhik=w1656-h603-rw)
+![Home Page Skin-purple](https://lh5.googleusercontent.com/AARy9Bjgl8TWqtKo13w5BKrZtufmpWsRk4Vg8stzasYz_p7mVO9Nd76TcO2Bu9klS1JDuB8WGwaOqjw=w1656-h829-rw)
 
 Installation
 ------------
