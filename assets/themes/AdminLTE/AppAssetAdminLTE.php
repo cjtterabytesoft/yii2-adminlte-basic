@@ -21,7 +21,7 @@ use yii\web\AssetBundle;
 
 class AppAssetAdminLTE extends AssetBundle
 {
-    public $sourcePath = '@cjtterabytesoft/adminlte/basic/assets/themes/AdminLTE';
+    public $sourcePath = '@cjtterabytesoft/adminlte/basic/assets/themes/AdminLTE/';
 
     public $css = [
         'css/site-adminlte.css',
@@ -31,20 +31,10 @@ class AppAssetAdminLTE extends AssetBundle
         'js/site-custom.js',
     ];
 
-    public function init()
-    {
-        parent::init();
-        $this->publishOptions['beforeCopy'] = function ($from) {
-            $publish = false;
-            $dirname = basename($from);
-            $parentFolder = basename(dirname($from));
-            if (
-                ($dirname === 'css' || $dirname === 'js') ||
-                ($parentFolder === 'css' || $parentFolder === 'js')
-            ) {
-                $publish = true;
-            }
-            return $publish;
-        };
-    }
+    public $publishOptions = [
+        'only' => [
+            'css/*',
+            'js/*',
+        ],
+    ];
 }

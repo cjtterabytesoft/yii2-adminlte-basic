@@ -21,26 +21,22 @@ use yii\web\AssetBundle;
 
 class IoniconsAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower/ionicons';
+    public $sourcePath = '@vendor/bower/ionicons/';
 
     public $css = [
         'css/ionicons.css',
     ];
 
-    public function init()
-    {
-        parent::init();
-        $this->publishOptions['beforeCopy'] = function ($from) {
-            $publish = false;
-            $dirname = basename($from);
-            $parentFolder = basename(dirname($from));
-            if (
-                ($dirname === 'css' || $dirname === 'fonts') ||
-                ($parentFolder === 'css' || $parentFolder === 'fonts')
-            ) {
-                $publish = true;
-            }
-            return $publish;
-        };
-    }
+    public $publishOptions = [
+        'only' => [
+            'fonts/*',
+            'css/*',
+        ],
+        'except' => [
+            'png',
+            'src',
+            'less',
+            'scss',
+        ]
+    ];
 }

@@ -21,26 +21,20 @@ use yii\web\AssetBundle;
 
 class FontAwesomeAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower/font-awesome';
+    public $sourcePath = '@vendor/bower/font-awesome/';
 
     public $css = [
         'css/font-awesome.css',
     ];
 
-    public function init()
-    {
-        parent::init();
-        $this->publishOptions['beforeCopy'] = function ($from) {
-            $publish = false;
-            $dirname = basename($from);
-            $parentFolder = basename(dirname($from));
-            if (
-                ($dirname === 'css' || $dirname === 'fonts') ||
-                ($parentFolder === 'css' || $parentFolder === 'fonts')
-            ) {
-                $publish = true;
-            }
-            return $publish;
-        };
-    }
+    public $publishOptions = [
+        'only' => [
+            'fonts/*',
+            'css/*',
+        ],
+        'except' => [
+            'less',
+            'scss',
+        ]
+    ];
 }

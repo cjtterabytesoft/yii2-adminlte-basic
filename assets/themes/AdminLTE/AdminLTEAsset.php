@@ -21,7 +21,7 @@ use yii\web\AssetBundle;
 
 class AdminLTEAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/bower/admin-lte/dist';
+    public $sourcePath = '@vendor/bower/admin-lte/dist/';
 
     public $css = [
         'css/AdminLTE.css',
@@ -41,20 +41,15 @@ class AdminLTEAsset extends AssetBundle
         'cjtterabytesoft\adminlte\basic\assets\bower\BootboxAsset',
     ];
 
-    public function init()
-    {
-        parent::init();
-        $this->publishOptions['beforeCopy'] = function ($from) {
-            $publish = false;
-            $dirname = basename($from);
-            $parentFolder = basename(dirname($from));
-            if (
-                ($dirname === 'css' || $dirname === 'skins'  || $dirname === 'js') ||
-                ($parentFolder === 'css' || $parentFolder === 'skins'  || $parentFolder === 'js')
-            ) {
-                $publish = true;
-            }
-            return $publish;
-        };
-    }
+    public $publishOptions = [
+        'only' => [
+            'css/*',
+            'css/skins/*',
+            'js/*',
+            'js/pages/*'
+        ],
+        'except' => [
+            'img',
+        ]
+    ];
 }
