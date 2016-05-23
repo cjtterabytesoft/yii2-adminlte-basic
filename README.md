@@ -70,13 +70,13 @@ Config (web.php):
                 ],
             ],
         ],
-        // Configuration ControllerMap [AdminLTE - Basic] //
-        'controllerMap' => [
-            'site' => [
-                'class' => 'cjtterabytesoft\adminlte\basic\controllers\SiteController',
-            ],
-        ],        
     ]        
+    // Configuration ControllerMap [AdminLTE - Basic] //
+    'controllerMap' => [
+        'site' => [
+            'class' => 'cjtterabytesoft\adminlte\basic\controllers\SiteController',
+        ],
+    ],     
     
 Config (params.php):
 
