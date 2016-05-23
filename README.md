@@ -40,7 +40,7 @@ Either run
 Installed: [yii2-app-basic](https://github.com/yiisoft/yii2-app-basic/).
 
 ```
-php composer.phar require --prefer-dist cjtterabytesoft/yii2-adminlte-basic "*"
+php composer.phar require --prefer-dist cjtterabytesoft/yii2-adminlte-basic "dev-master"
 ```
 
 or add
