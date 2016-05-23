@@ -13,12 +13,12 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.4",
+        "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
-        "bower-asset/admin-lte": "~2.1",
-        "bower-asset/Font-Awesome": "~4.3",
-        "bower-asset/ionicons": "~2.0",
-        "bower-asset/bootbox": "~4.4"
+        "bower-asset/admin-lte": "*",
+        "bower-asset/Font-Awesome": "*",
+        "bower-asset/ionicons": "*",
+        "bower-asset/bootbox": "*"
     },
     "require-dev": {
         "yiisoft/yii2-swiftmailer": "*",
