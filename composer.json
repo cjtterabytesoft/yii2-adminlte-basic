@@ -22,7 +22,9 @@
     },
     "require-dev": {
         "yiisoft/yii2-swiftmailer": "*",
-        "yiisoft/yii2-codeception": "*"
+        "codeception/base": "^2.2.3",
+        "codeception/verify": "~0.3.1",
+        "codeception/specify": "~0.4.3"
     },
     "autoload": {
         "psr-4": {
